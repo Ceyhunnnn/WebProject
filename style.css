@@ -1,6 +1,24 @@
-body {
-    background-color: blue;
-  }
 .sliderCar{
     padding:3%;
+}
+.takim{
+    text-align: center;
+    margin-top: 1%;
+}
+.takimYazi{
+    text-align: center;
+    margin-top: 1%;
+    font-size:x-large;
+}
+
+.footer{
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position:absolute;
+margin: 0px;
+padding: 0px;
+width: 100%;
+    background-color: #383838; 
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
 }
