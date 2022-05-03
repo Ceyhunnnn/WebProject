@@ -1,3 +1,7 @@
+
+<?php
+require 'baglanti.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,24 +19,24 @@
         <div class="row col-md-6 col-md-offset-3">
         <div class="panel panel-primary">
             <div class="panel-heading text-center">
-                <span class="display-2">Giriş Yap</span>
+                <span class="display-2">Oturum Aç</span>
                 </div>
             <div class="panel-body">
-                <form action="">
+                <form action="islem.php" method="post">
             
                 <div class="form-group">
                     <label for="mailAddress">E-Posta</label>
-                    <input type="text" class="form-control" id="mailAddress">
+                    <input type="text" class="form-control" name="mail">
                 </div>
                 <div class="form-group">
                     <label for="paswd">Parola</label>
-                    <input type="password" class="form-control" id="paswd">
+                    <input type="password" class="form-control" name="passwd">
                 </div>
-                <input type="submit" name="Kaydet" class="btn btn-success">
+                <input type="submit" name="giris"  value="Oturum aç" class="btn btn-success">
                 </form>
             </div>
             <div class="panel-footer text-right">
-                <small>&copy Selcuk University</small>
+                <small><a href="register.php">Yeni hesap oluştur</a></small>
             </div>
         </div>
         </div>

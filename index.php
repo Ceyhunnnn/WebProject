@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spor Kulüpleri</title>
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
@@ -25,19 +27,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="#">Kulüpler</a>
           </li>
           <li>
-            <a class="nav-link active" href="about.html">Hakkımızda</a>
+            <a class="nav-link active" href="about.php">Hakkında</a>
           </li>
       </div>
       <li>
       <li>
-        <button type="button" onClick="location.href='register.html'" class="btn btn-light">Kayıt Ol</button>
-        <button type="button" onClick="location.href='login.html'" class="btn btn-dark">Oturum Aç</button>
+        <button type="button" onClick="location.href='register.php'" class="btn btn-light">Kayıt Ol</button>
+        <button type="button" onClick="location.href='login.php'" class="btn btn-dark">Oturum Aç</button>
       </li>
     </div>
 

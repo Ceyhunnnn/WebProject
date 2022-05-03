@@ -36,7 +36,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link active" aria-current="page" href="index.php"
                   >Anasayfa</a
                 >
               </li>
@@ -44,7 +44,7 @@
                 <a class="nav-link active" href="#">Kulüpler</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="about.html">Hakkımızda</a>
+                <a class="nav-link active" href="about.php">Hakkımızda</a>
               </li>
          
             </ul>

@@ -1,3 +1,6 @@
+<?php
+require 'baglanti.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,28 +21,28 @@
                <span class="display-2">Kayıt Ol</span>
             </div>
          <div class="panel-body">
-            <form action="">
+            <form action="islem.php" method="post">
                 <div class="form-group">
                     <label for="firstName">Ad</label>
-                    <input type="text" class="form-control" id="firstName">
+                    <input type="text" class="form-control" name="username" placeholder="Ad">
                 </div>
                 <div class="form-group">
                    <label for="lastName">Soyad</label>
-                   <input type="text" class="form-control" id="lastName">
+                   <input type="text" class="form-control" name="surname" placeholder="Soyad">
                </div>
                <div class="form-group">
                    <label for="mailAddress">E-Posta</label>
-                   <input type="text" class="form-control" id="mailAddress">
+                   <input type="text" class="form-control" name="mail" placeholder="E-Posta">
                </div>
                <div class="form-group">
                    <label for="paswd">Parola</label>
-                   <input type="password" class="form-control" id="paswd">
+                   <input type="password" class="form-control" name="passwd" placeholder="Parola">
                </div>
-               <input type="submit" name="Kaydet" class="btn btn-primary">
+               <input type="submit" name="Kayit" value="Kayıt ol" class="btn btn-primary">
             </form>
            </div>
          <div class="panel-footer text-right">
-             <small>&copy Selcuk University</small>
+             <small>Hesabın var mı? <a href="login.php">Giriş yap</a></small>
            </div>
        </div>
     </div>
