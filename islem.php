@@ -9,12 +9,17 @@ if(isset($_POST['Kayit'])){
     $mail=$_POST["mail"];
     $passwd=$_POST["passwd"];
     
-    if(!$username){
-        echo "Lutfen kullanici adi girin";
+    if(!$username ){
+        echo "Lutfen adinizi girin";
     }
-    elseif(!$passwd){
-        echo "Lutfen sifrenizi girin";
-    }else{
+    elseif(!$surname){
+        echo "Lutfen soyadinizi girin";
+    }elseif(!$mail){
+        echo "Lutfen mail adresini girin.";
+    }elseif(!$passwd){
+        echo "Lutfen Parola girin";
+    }
+    else{
         //veritabani kayit islemi
         $sorgu=$db->prepare('INSERT INTO users SET  name=?, surname=?, mail=?, passwd=?');
         $ekle=$sorgu->execute([
@@ -32,7 +37,6 @@ if(isset($_POST['Kayit'])){
 
     }
 }
-
 if(isset($_POST['giris'])){
     $mail=$_POST['mail'];
     $passwd=$_POST['passwd'];
@@ -58,8 +62,3 @@ if(isset($_POST['giris'])){
 }
 
 ?>
-<!--
-
-
-
--->
