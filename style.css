@@ -1,24 +1,55 @@
-.sliderCar{
-    padding:3%;
-}
-.takim{
-    text-align: center;
-    margin-top: 1%;
-}
-.takimYazi{
-    text-align: center;
-    margin-top: 1%;
-    font-size:x-large;
+.sliderCar {
+    padding: 3%;
 }
 
-.footer{
+.takim {
+    text-align: center;
+    margin-top: 1%;
+}
+
+.takimYazi {
+    text-align: center;
+    margin-top: 1%;
+    font-size: 20px;
+}
+
+.footer {
     text-align: center;
     padding: 20px;
     color: white;
-    position:absolute;
-margin: 0px;
-padding: 0px;
-width: 100%;
-    background-color: #383838; 
-    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: #383838;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
 }
+
+.textCenter {
+    text-align: center;
+}
+
+.paddingCont {
+    padding: 25px;
+}
+
+.paddingImg {
+    padding: 12px;
+}
+
+.contColor {
+    background-color: #7882A4;
+
+}
+
+.news {
+    color: white;
+}
+
+.navBarMenu {
+    text-align: center;
+    padding: 0.5%;
+    background-color: #383838;
+    color: white;
+}
+
