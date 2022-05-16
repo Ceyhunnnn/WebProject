@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<?php
+require 'islem.php';
+include("baglanti.php");
+?>
+
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,35 +21,10 @@
 </head>
 
 <body style="background-color: #eeeeee">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Spor Kulüpleri</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Kulüpler</a>
-          </li>
-          <li>
-            <a class="nav-link active" href="about.php">Hakkımızda</a>
-          </li>
-      </div>
-      <li>
-      <li>
-        <button type="button" onClick="location.href='register.php'" class="btn btn-light">Kayıt Ol</button>
-        <button type="button" onClick="location.href='login.php'" class="btn btn-dark">Oturum Aç</button>
-      </li>
-    </div>
+<?php require_once('components/navbar.php'); ?>
 
 
 
-  </nav>
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -90,21 +71,20 @@
   <div class="container-fluid">
     <div class="row d-flex justify-content-around">
       <div class="col-4">
-        <img src="https://picsum.photos/id/25/200/300" width="auto" class="rounded mx-auto d-block img-fluid"
+        <img src="assets\home\spork1.jpg" width="auto" class="rounded mx-auto d-block img-fluid"
           alt="..." />
       </div>
       <div class="col-4">
-        <img src="https://picsum.photos/200/300" width="auto" class="rounded mx-auto d-block img-fluid" alt="..." />
+        <img src="assets\home\spork3.jpg" width="auto" class="rounded mx-auto d-block img-fluid" alt="..." />
       </div>
       <div class="col-4">
-        <img src="https://picsum.photos/id/26/200/300" width="auto" class="rounded mx-auto d-block img-fluid"
+        <img src="assets\home\spork2.jpg" width="auto" class="rounded mx-auto d-block img-fluid"
           alt="..." />
       </div>
     </div>
   </div>
   <br />
-
-
+<!-- 
 
 
   <div class="container-fluid  pb-2 ">
@@ -122,7 +102,7 @@
 
 
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -165,3 +145,4 @@
 </body>
 
 </html>
+

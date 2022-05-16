@@ -30,7 +30,7 @@ if(isset($_POST['Kayit'])){
         ]);
         if($ekle){
             echo "Kayit basarili";
-            header('Refresh:2; index.php');
+            header('location:index.php');
         }else{
             echo "Bir hata olustu tekrar deneyiniz.";
         }
@@ -54,11 +54,14 @@ if(isset($_POST['giris'])){
         if($say==1){
             $_SESSION['mail']=$mail;
             echo "basarili giris";
-            header('Refresh:2; index.php');
+            session_start();
+            $_SESSION["oturum"]=true;
+            $_SESSION["username"]=$username;
+           
+            header('location:index.php');
         }else{
             echo "bir hata olustu kontrol ediniz.";
         }
     }
 }
-
 ?>

@@ -11,7 +11,6 @@ require 'baglanti.php';
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 <div class="pageReg background">
@@ -26,7 +25,7 @@ require 'baglanti.php';
             <form action="islem.php" method="post">
                 <div class="form-group">
                     <label for="firstName">Ad</label>
-                    <input type="text" class="form-control" name="username" placeholder="Ad">
+                    <input type="text" class="form-control" name="username" placeholder="Ad"  >
                 </div>
                 <div class="form-group">
                    <label for="lastName">Soyad</label>

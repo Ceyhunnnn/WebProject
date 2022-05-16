@@ -40,9 +40,7 @@
                   >Anasayfa</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Kulüpler</a>
-              </li>
+        
               <li class="nav-item">
                 <a class="nav-link active" href="about.php">Hakkımızda</a>
               </li>
