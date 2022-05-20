@@ -13,17 +13,17 @@
          
           <li>
             <a class="nav-link active" href="about.php">Hakkımızda</a>
-          </li>
+          </li>          
       </div>
       <li>
-
-
-
-     
+            <a href="" style="color:white;text-align:center;" ><?php 
+             echo 'Saat: ' . date('H:i');?></a>
+          </li>
+      <li>
       <?php
 
       if(isset($_SESSION["oturum"])){?>
-
+            
             <button type="button" onClick="location.href='cikis.php'" class="btn btn-light">Çıkış Yap</button>
       <?php
       }

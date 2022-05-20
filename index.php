@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 <?php
-require 'islem.php';
 include("baglanti.php");
 ?>
 
@@ -22,9 +22,6 @@ include("baglanti.php");
 
 <body style="background-color: #eeeeee">
 <?php require_once('components/navbar.php'); ?>
-
-
-
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -65,25 +62,40 @@ include("baglanti.php");
   <h1 class="display-2 takim">Kulüpler</h1>
   <p class="takimYazi">
     Aşağıdaki kartlardan istediğin spor alanına göre seçim yapabilirsin.<br>
-    Daha detaylı bir inceleme sonucunda seçmiş olduğun spor kulübüne üye olabilirsin.
   </p>
 
-  <div class="container-fluid">
+<?php 
+  if(isset($_SESSION["oturum"])){?>
+              <div class="container-fluid">
     <div class="row d-flex justify-content-around">
       <div class="col-4">
-        <img src="assets\home\spork1.jpg" width="auto" class="rounded mx-auto d-block img-fluid"
-          alt="..." />
+        <a href="team.php"><img src="assets\home\spork1.jpg" width="auto" class="rounded mx-auto d-block img-fluid"
+          alt="..." /></a>
       </div>
       <div class="col-4">
-        <img src="assets\home\spork3.jpg" width="auto" class="rounded mx-auto d-block img-fluid" alt="..." />
+        <a href=""><img src="assets\home\spork3.jpg" width="auto" class="rounded mx-auto d-block img-fluid" alt="..." /></a>
       </div>
       <div class="col-4">
-        <img src="assets\home\spork2.jpg" width="auto" class="rounded mx-auto d-block img-fluid"
-          alt="..." />
+       <a href=""> 
+       <img src="assets\home\spork2.jpg" width="auto" class="rounded mx-auto d-block img-fluid"
+          alt="..." /></a>
       </div>
     </div>
   </div>
+           
+      <?php
+      }
+      else{?>
+            <div class="display-2" style="text-align:center">
+            Kulüplere erişmek için oturum açmalısınız.
+            
+            </div>
+      <?php
+      }?>
+
+ 
   <br />
+  
 <!-- 
 
 
@@ -145,4 +157,3 @@ include("baglanti.php");
 </body>
 
 </html>
-

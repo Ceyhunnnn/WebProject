@@ -8,7 +8,8 @@ if(isset($_POST['Kayit'])){
     $surname=$_POST["surname"];
     $mail=$_POST["mail"];
     $passwd=$_POST["passwd"];
-    
+  
+ 
     if(!$username ){
         echo "Lutfen adinizi girin";
     }
@@ -37,6 +38,9 @@ if(isset($_POST['Kayit'])){
 
     }
 }
+
+
+
 if(isset($_POST['giris'])){
     $mail=$_POST['mail'];
     $passwd=$_POST['passwd'];
@@ -56,12 +60,39 @@ if(isset($_POST['giris'])){
             echo "basarili giris";
             session_start();
             $_SESSION["oturum"]=true;
-            $_SESSION["username"]=$username;
            
+          
             header('location:index.php');
         }else{
             echo "bir hata olustu kontrol ediniz.";
         }
+    }
+}
+
+$now=date('Y/m/d H/i/s');
+
+if(isset($_POST['paylas'])){
+    $comment=$_POST["comment"];
+    
+    if(!$comment ){
+        echo "Lutfen yorum kısmını boş bırakmayınız.";
+    }
+    
+    else{
+        //veritabani kayit islemi
+        $sorgu=$db->prepare('INSERT INTO comments SET  comment=?,Tarih=?');
+        $ekle=$sorgu->execute([
+            $comment,
+            $now
+          
+        ]);
+        if($ekle){
+            echo "Kayit basarili";
+            header('location:team.php');
+        }else{
+            echo "Bir hata olustu tekrar deneyiniz.";
+        }
+
     }
 }
 ?>
