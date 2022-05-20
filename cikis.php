@@ -1,5 +1,5 @@
 <?php
   session_start();
   session_destroy();
-  header('Refresh:1; index.php');
+  header('location:index.php');
   ?>

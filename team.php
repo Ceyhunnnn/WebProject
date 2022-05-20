@@ -1,7 +1,7 @@
 <?php
-require 'baglanti.php';
-session_start();
+require("baglanti.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +55,7 @@ session_start();
 
 <div style="text-align:center;">
 <div class="ui input focus">
-<div class="row ">
+<div class="row">
 <form action="islem.php" method="post">
 <input class="form-control"  type="text" name="comment" placeholder="Yorum Yap" >
   </div> <div style="margin-right:20px;"></div>
@@ -70,11 +70,11 @@ session_start();
 
 </div>
 <br>
+<?php
+require("baglanti.php");
+session_start();
+echo $_SESSION["mail"];?>
 
-
-<h1>
-  <?php echo $_SESSION["name"];?>
-</h1>
 
 </div>
 <?php
@@ -103,7 +103,7 @@ if(!$sonuc){ ?>
       <img src="https://i.pravatar.cc/2000">
     </a>
     <div class="content">
-      <a class="author">Stevie Feliciano</a>
+      <a class="author"><?php echo $sonuc["username"]; ?></a>
       <div class="metadata">
         <div class="date" ><?php echo $sonuc["Tarih"]; ?></div>
         <div class="rating">
@@ -124,11 +124,7 @@ if(!$sonuc){ ?>
 <?php
 }?>
 
-<?php
-   session_start();
-   ?><h1><?php echo $_SESSION["name"];?></h1><?php
 
-?>
 
 </div>
 </div>

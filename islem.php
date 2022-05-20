@@ -8,8 +8,6 @@ if(isset($_POST['Kayit'])){
     $surname=$_POST["surname"];
     $mail=$_POST["mail"];
     $passwd=$_POST["passwd"];
-  
- 
     if(!$username ){
         echo "Lutfen adinizi girin";
     }
@@ -38,9 +36,6 @@ if(isset($_POST['Kayit'])){
 
     }
 }
-
-
-
 if(isset($_POST['giris'])){
     $mail=$_POST['mail'];
     $passwd=$_POST['passwd'];
@@ -54,14 +49,12 @@ if(isset($_POST['giris'])){
              $mail,
              $passwd
         ]);
-         $say=$kullanici_sor->rowCount();
+          $say=$kullanici_sor->rowCount();
         if($say==1){
-            $_SESSION['mail']=$mail;
-            echo "basarili giris";
             session_start();
             $_SESSION["oturum"]=true;
-           
-          
+            $_SESSION["mail"]=$mail; 
+            echo "basarili giris";
             header('location:index.php');
         }else{
             echo "bir hata olustu kontrol ediniz.";
@@ -69,22 +62,23 @@ if(isset($_POST['giris'])){
     }
 }
 
+
 $now=date('Y/m/d H/i/s');
+
 
 if(isset($_POST['paylas'])){
     $comment=$_POST["comment"];
-    
+    $username=$_SESSION["mail"];
     if(!$comment ){
         echo "Lutfen yorum kısmını boş bırakmayınız.";
-    }
-    
+    }   
     else{
         //veritabani kayit islemi
-        $sorgu=$db->prepare('INSERT INTO comments SET  comment=?,Tarih=?');
+        $sorgu=$db->prepare('INSERT INTO comments SET  comment=?, username=?, Tarih=?');
         $ekle=$sorgu->execute([
             $comment,
+            $username,
             $now
-          
         ]);
         if($ekle){
             echo "Kayit basarili";

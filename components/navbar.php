@@ -15,15 +15,15 @@
             <a class="nav-link active" href="about.php">Hakkımızda</a>
           </li>          
       </div>
-      <li>
+      <!-- <li>
             <a href="" style="color:white;text-align:center;" ><?php 
              echo 'Saat: ' . date('H:i');?></a>
-          </li>
+          </li> -->
       <li>
       <?php
-
+      require('baglanti.php');
+      session_start();
       if(isset($_SESSION["oturum"])){?>
-            
             <button type="button" onClick="location.href='cikis.php'" class="btn btn-light">Çıkış Yap</button>
       <?php
       }
@@ -32,7 +32,6 @@
       <button type="button" onClick="location.href='login.php'" class="btn btn-dark">Oturum Aç</button>
       <?php
       }?>
-
-        
       </li>
-    </div>  </nav>
+    </div>
+  </nav>
