@@ -25,12 +25,12 @@ require 'baglanti.php';
                 <form action="islem.php" method="post">
             
                 <div class="form-group">
-                    <label for="mailAddress">E-Posta</label>
-                    <input type="text" class="form-control" name="mail">
+                    <label for="mailAddress">Kullanıcı Adı</label>
+                    <input type="text" class="form-control" placeholder="Kullanıcı Adı" name="mail">
                 </div>
                 <div class="form-group">
                     <label for="paswd">Parola</label>
-                    <input type="password" class="form-control" name="passwd">
+                    <input type="password" class="form-control"  placeholder="Parola" name="passwd">
                 </div>
                 <input type="submit" name="giris"  value="Oturum aç" class="btn btn-success">
                 </form>

@@ -2,8 +2,8 @@
 ob_start();
 session_start();
 require 'baglanti.php';
-
 if(isset($_POST['Kayit'])){
+    $_nameGet=$_POST["username"];
     $username=$_POST["username"];
     $surname=$_POST["surname"];
     $mail=$_POST["mail"];
@@ -55,7 +55,7 @@ if(isset($_POST['giris'])){
             $_SESSION["oturum"]=true;
             $_SESSION["mail"]=$mail; 
             echo "basarili giris";
-            header('location:index.php');
+            header('location: index.php');
         }else{
             echo "bir hata olustu kontrol ediniz.";
         }
@@ -89,4 +89,5 @@ if(isset($_POST['paylas'])){
 
     }
 }
+
 ?>

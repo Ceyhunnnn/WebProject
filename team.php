@@ -1,5 +1,7 @@
 <?php
 require("baglanti.php");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -70,10 +72,9 @@ require("baglanti.php");
 
 </div>
 <br>
-<?php
-require("baglanti.php");
+<!-- <?php
 session_start();
-echo $_SESSION["mail"];?>
+echo $_SESSION["mail"];?> -->
 
 
 </div>
@@ -101,13 +102,50 @@ if(!$sonuc){ ?>
   <div class="comment">
     <a class="avatar">
       <img src="https://i.pravatar.cc/2000">
+     
     </a>
     <div class="content">
       <a class="author"><?php echo $sonuc["username"]; ?></a>
+      
       <div class="metadata">
         <div class="date" ><?php echo $sonuc["Tarih"]; ?></div>
         <div class="rating">
-          <i class="star icon"></i>
+         <?php
+         if($_SESSION["mail"]==$sonuc["username"]){
+           
+           $_id=$sonuc["comment_id"];
+           //echo $_id;
+  ?>
+  <?php
+	
+  if(isset($_POST['delete'])) { 
+    $vt = new mysqli('localhost', 'root', '');
+    if($vt->connect_errno) {
+      exit;
+    }
+    $vt->select_db('sporkulubu');
+    $sorgu = $vt->query("DELETE from comments  where comment_id=".$_id);
+          if($sorgu>0){
+             //echo "Başarıyla silindi";
+             header('location:team.php');
+              } else{
+        }  
+  } 
+
+?> 
+            <form method="post"> 
+		<input type="submit" name="delete"
+				value="Sil"/> 
+		
+
+	</form> 
+      
+          <?php
+         }
+         else{?>
+<i class="star icon"></i><?php
+         }?>
+       
          
         </div>
       </div>
@@ -126,6 +164,7 @@ if(!$sonuc){ ?>
 
 
 
+
 </div>
 </div>
 
@@ -135,5 +174,8 @@ if(!$sonuc){ ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>

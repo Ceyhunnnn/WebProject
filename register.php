@@ -32,8 +32,8 @@ require 'baglanti.php';
                    <input type="text" class="form-control" name="surname" placeholder="Soyad">
                </div>
                <div class="form-group">
-                   <label for="mailAddress">E-Posta</label>
-                   <input type="text" class="form-control" name="mail" placeholder="E-Posta">
+                   <label for="mailAddress">Kullanıcı Adı</label>
+                   <input type="text" class="form-control" name="mail" placeholder="Kullanıcı Adı">
                </div>
                <div class="form-group">
                    <label for="paswd">Parola</label>

@@ -60,6 +60,7 @@ include("baglanti.php");
   </div>
 
   <h1 class="display-2 takim">Kulüpler</h1>
+
   <p class="takimYazi">
     Aşağıdaki kartlardan istediğin spor alanına göre seçim yapabilirsin.<br>
   </p>

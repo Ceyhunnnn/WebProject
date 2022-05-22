@@ -15,10 +15,11 @@
             <a class="nav-link active" href="about.php">Hakkımızda</a>
           </li>          
       </div>
-      <!-- <li>
+
+      <li>
             <a href="" style="color:white;text-align:center;" ><?php 
-             echo 'Saat: ' . date('H:i');?></a>
-          </li> -->
+            echo  date("d/m/Y"); ?></a>
+          </li>
       <li>
       <?php
       require('baglanti.php');
