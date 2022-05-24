@@ -50,7 +50,9 @@ require("baglanti.php");
           </div>
         </div>
       </nav>
-      <p class="display-3" style="margin:20px;">Basketbol Spor Kulübü</p>
+
+      
+      <p class="display-3" style="margin:20px;">Basketbol Spor Kulübü Tartışma Platformu</p>
 
 <div  style="margin:20px">
 
@@ -71,12 +73,13 @@ require("baglanti.php");
 
 
 </div>
+
 <br>
 <!-- <?php
 session_start();
 echo $_SESSION["mail"];?> -->
 
-
+<div class="container">
 </div>
 <?php
 // veritabanına bağlan
@@ -112,10 +115,10 @@ if(!$sonuc){ ?>
         <div class="rating">
          <?php
          if($_SESSION["mail"]==$sonuc["username"]){
-           
            $_id=$sonuc["comment_id"];
            //echo $_id;
   ?>
+  
   <?php
 	
   if(isset($_POST['delete'])) { 
@@ -135,7 +138,7 @@ if(!$sonuc){ ?>
 ?> 
             <form method="post"> 
 		<input type="submit" name="delete"
-				value="Sil"/> 
+				value="Sil"/>
 		
 
 	</form> 
@@ -161,8 +164,6 @@ if(!$sonuc){ ?>
   
 <?php
 }?>
-
-
 
 
 </div>

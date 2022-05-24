@@ -26,17 +26,21 @@ include("baglanti.php");
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"
         aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="active"
         aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="active"
         aria-label="Slide 4"></button>
     </div>
     <div class="carousel-inner">
+
+
       <div class="carousel-item active">
         <img src="assets/images/football.jpg" class="d-block w-100" alt="..." />
       </div>
+
+      
       <div class="carousel-item">
         <img src="assets/images/basketball.jpg" class="d-block w-100" alt="..." />
       </div>
@@ -97,28 +101,6 @@ include("baglanti.php");
  
   <br />
   
-<!-- 
-
-
-  <div class="container-fluid  pb-2 ">
-    <h1 class="display-2 takim ">Haberler</h1>
-    <div class="row justify-content-evenly">
-      <div class="card" style="width: 18rem;">
-        <img src="assets/images/news.jpg" class=" paddingImg card-img-top img-fluid " alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Haber Başlığı</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Devamını Oku..</a>
-        </div>
-      </div>
-
-
-    </div>
-  </div> -->
-
-
-
 
 
   <div class="container-fluid name">
